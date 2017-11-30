@@ -19,5 +19,6 @@ RUN chmod +x bpm
 ADD handler.sh .
 RUN chmod +x handler.sh
 
+ENV exec_timeout 30
 ENV fprocess="sh ./handler.sh"
 CMD [ "fwatchdog" ]
